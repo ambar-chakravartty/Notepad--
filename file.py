@@ -41,6 +41,11 @@ def copy():
 def paste():
 	t = root.clipboard_get()
 	text_area.insert(text_area.index(INSERT),t)
+	
+	
+def new():
+	root.title('Untitled')
+	text_area.delete(0.0,END)
 
 def do_popup(event):
 	try:
@@ -56,7 +61,7 @@ text_area = Text(root)
 menubar = Menu(root)
 
 filemenu = Menu(menubar)
-filemenu.add_command(label="New")
+filemenu.add_command(label="New",commmand = lambda: new())
 filemenu.add_command(label="Open",command=lambda: openFile())
 filemenu.add_command(label="Save",command=lambda : save())
 filemenu.add_command(label="Save As",command=lambda : saveAs())
