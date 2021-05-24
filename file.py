@@ -61,7 +61,7 @@ text_area = Text(root)
 menubar = Menu(root)
 
 filemenu = Menu(menubar)
-filemenu.add_command(label="New",commmand = lambda: new())
+filemenu.add_command(label="New",command = lambda: new())
 filemenu.add_command(label="Open",command=lambda: openFile())
 filemenu.add_command(label="Save",command=lambda : save())
 filemenu.add_command(label="Save As",command=lambda : saveAs())
